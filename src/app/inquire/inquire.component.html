@@ -1,0 +1,296 @@
+<div fxLayout="column">
+ 
+
+  <mat-card fxLayout="row" fxLayoutGap="10px" fxFlex="100" style="width: 100%;" class="mr-10" fxFlexAlign="baseline">
+    
+    <div fxLayout="column" fxFlex="50">
+      <p>Customer Info</p>
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="20" fxFlex.xs="100">
+          <mat-label>Sold To</mat-label>
+          <input matInput placeholder="Sold To">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="80">
+          <mat-label></mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="30">
+          <mat-label>Location</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="70">
+          <mat-label></mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="60">
+          <mat-label>Caller</mat-label>
+          <mat-select name="caller">
+            <mat-option *ngFor="let caller of ['caller 1', 'caller 2']">
+              {{caller}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="40">
+          <mat-label>Serviced Date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>EDI Ref</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+
+      <div fxLayout="row" fxLayoutAlign="space-between center" width="100%" fxLayoutGap="12px">
+
+        <div fxFlex="40" fxLayout="column" fxLayoutAlign="center">
+          <div fxLayout="column" fxLayoutAlign="space-between start" style="margin-bottom: 13px;">
+            <mat-checkbox>VSP Pays</mat-checkbox>
+            <mat-checkbox>VSP Redo</mat-checkbox>
+          </div>
+        </div>
+
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Insurance</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="50">
+      <div fxLayout="column" style="height: 60px; padding-bottom: 1.34375em;" fxFlex="60">
+        <label id="example-radio-group-label">Job type</label>
+        <mat-radio-group aria-label="Select Job type" fxLayout="row" fxLayoutAlign="flex-start center" fxLayoutGap="10px" fxFlex="100">
+          <mat-radio-button value="1">Orig</mat-radio-button>
+          <mat-radio-button value="2">Redo</mat-radio-button>
+          <mat-radio-button value="3">Like</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+
+        <div fxFlex="100">
+          <mat-form-field appearance="outline">
+            <mat-label>Job No</mat-label>
+            <input matInput placeholder="Placeholder">
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <div fxFlex="60">
+          <mat-form-field appearance="outline">
+            <mat-label>Orig Job No</mat-label>
+            <input matInput placeholder="Placeholder">
+          </mat-form-field>
+        </div>
+        <div fxFlex="40">
+          <mat-form-field appearance="outline">
+            <mat-label>Source</mat-label>
+            <mat-select name="Source">
+              <mat-option *ngFor="let source of ['Source 1', 'Source 2']">
+                {{source}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="60">
+          <mat-label>Redo Reason</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="40">
+          <mat-label>Lab</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Partner Order No</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+
+      </div>
+
+
+
+    </div>
+  </mat-card>
+
+
+  <mat-card fxLayout="column" fxFlex="100" class="mr-10">
+    <div fxLayout="row" fxLayoutGap="10px">
+      <mat-form-field appearance="outline" fxFlex="60">
+        <mat-label>Patient Name</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="40">
+        <mat-label>Patient Name</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div fxFlex="10" fxLayout="column" fxLayoutAlign="center stretch" style="height: 60px">
+        <button mat-raised-button color="primary">Lens Design</button>
+      </div>
+
+      <mat-form-field appearance="outline" fxFlex="30">
+        <mat-label>Patient Name</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="40">
+        <mat-label>Patient Name</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="40">
+        <mat-label>Patient Name</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="10px">
+      <mat-form-field appearance="outline" fxFlex="20">
+        <mat-label>Material 1</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="30">
+        <mat-label>Material 2</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="20">
+        <mat-label>Material 3</mat-label>
+        <input matInput placeholder="Sold To">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="30">
+        <mat-label>Out Today</mat-label>
+        <mat-select name="caller">
+          <mat-option *ngFor="let out of ['Out 1', 'Out 2']">
+            {{out}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-checkbox>Wrap</mat-checkbox>
+        <mat-checkbox>A Worn</mat-checkbox>
+        <mat-checkbox>Use Stock Lens</mat-checkbox>
+        <mat-checkbox>Rush</mat-checkbox>
+
+      </div>
+    </div>
+
+
+  </mat-card>
+
+
+  <mat-card fxLayout="row" fxLayoutGap="10px" fxFlex="100" style="width: 100%;" fxFlexAlign="baseline">
+    <div fxLayout="column" fxFlex="50" >
+      
+      <div fxLayout="row" fxLayoutAlign="start start">
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Color Name</mat-label>
+          <input matInput placeholder="Color Name">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Color</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Color</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Family</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="50">
+          <mat-label>Family</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div fxLayout="column"   fxFlex="50">
+      <div fxLayout="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Source</mat-label>
+          <mat-select name="Source">
+            <mat-option *ngFor="let source of ['Source 1', 'Source 2']">
+              {{source}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      
+      <div fxLayout="row">
+        <mat-radio-group aria-label="Select Job type" fxLayout="row" fxLayoutAlign="space-between center" style="height: 60px;" fxFlex="100">
+          <mat-radio-button value="1">Balance Lens</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+    <div fxLayout="column" fxFlex="50">
+
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>Frame Status</mat-label>
+          <mat-select name="Source">
+            <mat-option *ngFor="let status of ['status 1', 'status 2']">
+              {{status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Frame Type</mat-label>
+          <mat-select name="Source">
+            <mat-option *ngFor="let frame of ['frame 1', 'frame 2']">
+              {{frame}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" >
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Tracking Number</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-card>
+
+
+</div>
